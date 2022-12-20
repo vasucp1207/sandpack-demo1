@@ -16,6 +16,7 @@ export default function App() {
         <div className="markdown">
           <Markdown
             children={markdown}
+            remarkPlugins={[remarkGfm]}
           />
         </div>
 

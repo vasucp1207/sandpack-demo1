@@ -1,6 +1,7 @@
 import { Sandpack } from "@codesandbox/sandpack-react";
 import Markdown from 'react-markdown';
 import { markdown } from './MD/intro.js'
+import remarkGfm from 'remark-gfm'
 import './App.css'
 import files from "./Persist.js";
 import setupStyles from "./styles.js";
@@ -16,6 +17,7 @@ export default function App() {
         <div className="markdown">
           <Markdown
             children={markdown}
+            remarkPlugins={[remarkGfm]}
           />
         </div>
 
